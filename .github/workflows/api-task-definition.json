@@ -12,11 +12,11 @@
           "name": "dncoreapi",
           "image": "ghcr.io/srirangv/dncorecicddemoghactions/dncoredb:latest",
           "repositoryCredentials": {
-            "credentialsParameter": "arn:aws:secretsmanager:region:aws_account_id:secret:secret_name"
+            "credentialsParameter": "arn:aws:secretsmanager:${{ env.AWS_REGION }}:${{ secrets.AWS_ACCOUNT_ID }}:secret:demo/imageregistry-8SNhU5"
           },
-          "executionRoleArn": "arn:aws:iam::aws_account_id:role/ecsTaskExecutionRole",
+          "executionRoleArn": "arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/ecsTaskExecutionRole",
           "environment" : [
-            { "name" : "DB_CONN_STR", "value" : "string" }
+            { "name" : "DB_CONN_STR", "value" : "${{ secrets.DB_CONN_STR }}" }
           ],
           "cpu": 512,
           "memoryReservation": 1024
