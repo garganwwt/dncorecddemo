@@ -14,7 +14,6 @@
           "repositoryCredentials": {
             "credentialsParameter": "arn:aws:secretsmanager:${{ env.AWS_REGION }}:${{ secrets.AWS_ACCOUNT_ID }}:secret:demo/imageregistry-8SNhU5"
           },
-          "executionRoleArn": "arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/ecsTaskExecutionRole",
           "environment" : [
             { "name" : "DB_CONN_STR", "value" : "${{ secrets.DB_CONN_STR }}" }
           ],
