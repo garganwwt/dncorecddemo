@@ -1,5 +1,6 @@
 {
     "memory": "1024",
+    "networkMode": "awsvpc",
     "cpu": "512",
     "family": "fargate-task-definition",
     "requiresCompatibilities": [
@@ -16,13 +17,6 @@
           "environment" : [
             { "name" : "DB_CONN_STR", "value" : "${{ secrets.DB_CONN_STR }}" }
           ],
-          "portMappings": [ 
-            { 
-               "containerPort": 5001,
-               "hostPort": 80,
-               "protocol": "tcp"
-            }
-         ],
           "cpu": 512,
           "memoryReservation": 1024
        }
