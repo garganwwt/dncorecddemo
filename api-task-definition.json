@@ -20,5 +20,6 @@
           "cpu": 512,
           "memoryReservation": 1024
        }
-    ]
+    ],
+    "executionRoleArn": "arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/ecsTaskExecutionRole"
  }
