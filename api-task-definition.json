@@ -1,6 +1,5 @@
 {
     "memory": "1024",
-    "networkMode": "awsvpc",
     "cpu": "512",
     "family": "fargate-task-definition",
     "requiresCompatibilities": [
