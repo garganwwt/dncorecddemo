@@ -1,0 +1,25 @@
+{
+    "memory": "1024",
+    "networkMode": "awsvpc",
+    "cpu": "512",
+    "family": "dncore",
+    "requiresCompatibilities": [
+       "FARGATE"
+    ],
+    "containerDefinitions": [
+       {
+          "essential": true,
+          "name": "dncoreapi",
+          "image": "ghcr.io/srirangv/dncorecicddemoghactions/dncoredb:latest",
+          "repositoryCredentials": {
+            "credentialsParameter": "arn:aws:secretsmanager:region:aws_account_id:secret:secret_name"
+          },
+          "executionRoleArn": "arn:aws:iam::aws_account_id:role/ecsTaskExecutionRole",
+          "environment" : [
+            { "name" : "DB_CONN_STR", "value" : "string" }
+          ],
+          "cpu": 512,
+          "memoryReservation": 1024
+       }
+    ]
+ }
