@@ -12,7 +12,7 @@
           "name": "dncoreapi",
           "image": "ghcr.io/srirangv/dncorecicddemoghactions/dncoredb:latest",
           "repositoryCredentials": {
-            "credentialsParameter": "arn:aws:secretsmanager:us-east-1:367444460268:secret:demo/imageregistry-8SNhU5"
+            "credentialsParameter": "arn:aws:secretsmanager:us-east-2:367444460268:secret:demo/imageregistry-8SNhU5"
           },
           "environment" : [
             { "name" : "DB_CONN_STR", "value" : "${{ secrets.DB_CONN_STR }}" }
