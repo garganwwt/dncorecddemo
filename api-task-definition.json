@@ -15,13 +15,21 @@
             "credentialsParameter": "arn:aws:secretsmanager:us-east-2:367444460268:secret:githubregistrytoken-9c0pcz"
           },
           "environment" : [
-            { "name" : "DB_CONN_STR", "value" : "${{ secrets.DB_CONN_STR }}" }
+            { "name" : "DB_CONN_STR", "value" : "host=admindb;port=5432;database=qsr-onboarding-admin;user id=postgres;password=postgres" }
           ],
           "portMappings": [ 
             { 
                "containerPort": 5001
             }
          ],
+         "logConfiguration": {
+             "logDriver": "awslogs",
+             "options": {
+                 "awslogs-group": "awslogs-my-cd-demo",
+                 "awslogs-region": "us-west-2",
+                 "awslogs-stream-prefix": "cd-demo"
+             }
+         },
           "cpu": 512,
           "memoryReservation": 1024
        }
