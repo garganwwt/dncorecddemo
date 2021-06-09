@@ -34,6 +34,6 @@
           "memoryReservation": 1024
        }
     ],
-    "executionRoleArn": "arn:aws:iam::367444460268:user/ag-aws:role/ecsTaskExecutionRole",
-    "taskRoleArn": "arn:aws:iam::367444460268:user/ag-aws:role/ecsTaskExecutionRole"
+    "executionRoleArn": "arn:aws:iam::367444460268:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::367444460268:role/ecsTaskExecutionRole"
  }
