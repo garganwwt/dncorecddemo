@@ -17,6 +17,11 @@
           "environment" : [
             { "name" : "DB_CONN_STR", "value" : "${{ secrets.DB_CONN_STR }}" }
           ],
+          "portMappings": [ 
+            { 
+               "containerPort": 5001
+            }
+         ],
           "cpu": 512,
           "memoryReservation": 1024
        }
