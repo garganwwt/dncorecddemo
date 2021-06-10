@@ -14,10 +14,6 @@
           "repositoryCredentials": {
             "credentialsParameter": "arn:aws:secretsmanager:us-east-2:367444460268:secret:githubregistrytoken-9c0pcz"
           },
-           "secret" : {
-               "name": "githubregistrytoken",
-               "valueFrom": "arn:aws:secretsmanager:us-east-2:367444460268:secret:githubregistrytoken-9c0pcz"
-           },
           "environment" : [
             { "name" : "DB_CONN_STR", "value" : "host=admindb;port=5432;database=qsr-onboarding-admin;user id=postgres;password=postgres" }
           ],
