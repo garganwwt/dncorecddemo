@@ -10,7 +10,7 @@
        {
           "essential": true,
           "name": "dncoreapi",
-          "image": "ghcr.io/garganwwt/dncorecicddemoghactions/dncoredb:latest",
+          "image": "docker.pkg.github.com/garganwwt/dncorecicddemoghactions/dncoredb:latest",
           "repositoryCredentials": {
             "credentialsParameter": "arn:aws:secretsmanager:us-east-2:367444460268:secret:ag-github-aws-ZgvIID"
           },
